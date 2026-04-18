@@ -1,5 +1,11 @@
-const CACHE = 'parlayp-v1';
-const ASSETS = ['/', '/index.html', '/manifest.json', '/icons/icon-192.png', '/icons/icon-512.png'];
+const CACHE = 'parlayp-v2';
+const ASSETS = [
+  '/Parlayp/',
+  '/Parlayp/index.html',
+  '/Parlayp/manifest.json',
+  '/Parlayp/icons/icon-192.png',
+  '/Parlayp/icons/icon-512.png'
+];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
